@@ -1,5 +1,7 @@
 ("use strict");
-// BASICS
+// KINTAMIEJI: array,texts,strings,numbers
+// OPERATORIAI: +, -, etc
+// KINTAMŲJŲ INICIAVIMAS: cost, let, var(pasenęs, vietoje jo naudoti let)
 
 //skaičiavimas: 4 + 7 = 11
 const pirmas = 4;
@@ -76,3 +78,40 @@ numSum = numSum + num[0];
 console.log(numSum);
 
 index = index++;
+
+// 09-03
+
+// const animals = ['dog', 'cat', 'pig'];
+// console.log('Pirmas gyvunas:' animals[0]);
+
+const sentence = animals [0] + 'lukyNumber is' + luckyNumber;
+console.log(sentence);
+
+// dinaminio sakinio konstravimas. +paterno įterpimas+ 
+const rez = 'skaiciu ' + pirmas + 'ir' + antra + 'suma'
+cosole.log(rez);
+// kiekvienos eilutes gale rasome \
+// \n\ -padaro enter 
+// visur rasyti '' kad "links" atsivaizduotu
+
+// Kabuciu apzaidimas:
+
+// (\') \ padaro escape jei sakinyje yra kabutes t.y ignoruoja salia esanti simboli, kad uzrasyti \ reikia rasyti \\
+
+
+
+
+
+
+
+//NEW SCHOOL 3 budas sablonai tekstams: back ticks `` (zemiau esc) tekstas idetas i ji atvaizduoja tiksliai kaip parasyta js
+// naudojamas multiline su kabuciu iterpimais
+const imgAlt = 'Serloko nuotrauka'
+// \` escapiname jei reikia panaudoti
+// linkams uzrasyti, veikia tik su back tick
+alt=`${}`
+
+${links2 [0]}
+//  nereikia zaisti su + 
+
+// console.clear- isvalymui
