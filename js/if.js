@@ -30,15 +30,15 @@ if (color === "melyna") {
     if (color === 'zalia') {
         console.log('srekas');
     }
-    }else {
-if (color ==='ruda')
+    } else {
+if (color ==='ruda') {
 console.log('melagiai')
-}else {
+} else {
 ('velniu priede');
 }
 
 // nestinimas 2 variantas, eilute
-const month: 'sausis';
+const month= 'sausis';
 
 if (month=== 'sausis') {
     console.log(1);
