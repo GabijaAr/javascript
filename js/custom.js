@@ -186,6 +186,7 @@ const rez = `Suma nuo ${nuo} iki ${iki} yra ${suma}.`;
 
 console.log(rez);
 
+
 // panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo:
 // “abcdef” -> “fedcba”
 
@@ -207,6 +208,7 @@ console.log(changedStringT);
 // % dalybos metu grąžina liekaną ir tada dalina kitą cikle esantį skaičių
 // / dalina vieną kartą
 
+// galima prideti kintamaji dalikli 3
 let dalTrys = 0;
 let dalPenki = 0;
 let dalSeptyni = 0;
@@ -215,6 +217,7 @@ let dalSeptyni = 0;
 let start0 = 0;
 let end11 = 11;
 
+// for ciklo sukimasis i++ paiima sekanti skaiciu, 
 for (let i = start0; i <= end11; i++) {
   if (i % 3 === 0) {
     dalTrys++;
@@ -261,6 +264,7 @@ console.log(
 let startM18 = -18;
 let endM18 = -18;
 
+function interval (nuo, iki, daliklis) {
 for (let i = startM18; i <= endM18; i++) {
   if (i % 3 === 0) {
     dalTrys++;
@@ -272,6 +276,7 @@ for (let i = startM18; i <= endM18; i++) {
     dalSeptyni++;
   }
 }
+}
 
 console.log(
   `Skaičių intervale tarp ${startM18} ir ${endM18}, besidalijančių be liekanos iš 3 yra ${dalTrys} vienetai.\n
@@ -279,5 +284,10 @@ console.log(
   Skaičių intervale tarp ${startM18} ir ${endM18}, besidalijančių be liekanos iš 3 yra ${dalSeptyni} vienetai.
   `
 );
+return rez;
 
 // FUNKCIJOS
+funcija-funkcijos vardas-funkcijos argumentas
+function tusciaFunkcija(params) {
+  
+}
