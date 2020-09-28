@@ -215,10 +215,15 @@ let dalSeptyni = 0;
 
 // 0-11
 let start0 = 0;
-let end11 = 11;
 
 // for ciklo sukimasis i++ paiima sekanti skaiciu, 
+let end11 = 11;
+
+// let i pradinis taskas, i<= daugiau arba lygu- sustoja kai pasiekia si skaiciu 
+// i++ leidzia sukti cikla, pritaikius 1 skaiciu pereinama i kita padidinant ji
+// dalTrys++ padidina vienetu, tai leidzia skaiciuoti kiek kartu ivykdyta salyga- if pasiteisnes
 for (let i = start0; i <= end11; i++) {
+
   if (i % 3 === 0) {
     dalTrys++;
   }
@@ -241,7 +246,7 @@ console.log(
 let start8 = 8;
 let end31 = 31;
 
-for (let i = start8; i <= end31; i++) {
+for (let i = 8; i <= end31; i++) {
   if (i % 3 === 0) {
     dalTrys++;
   }
@@ -261,11 +266,12 @@ console.log(
 );
 
 // -18 - 18;
-let startM18 = -18;
-let endM18 = -18;
 
 function interval (nuo, iki, daliklis) {
-for (let i = startM18; i <= endM18; i++) {
+  let startM18 = -18;
+  let endM18 = -18;
+
+  for (let i = startM18; i <= endM18; i++) {
   if (i % 3 === 0) {
     dalTrys++;
   }
@@ -288,6 +294,13 @@ return rez;
 
 // FUNKCIJOS
 funcija-funkcijos vardas-funkcijos argumentas
-function tusciaFunkcija(params) {
-  
+function tusciaFunkcija(name, value) {
+  let x = value; 
+ x= value + name;
+
+ return x;
 }
+// cicklas - kai pasikartojancius dalykus nori daryti
+// if kai reikia ispildyti konkrecia salyga
+// funkcija kai reikia kazka joje atlikti (pernaudojimas)
+tdndyhm(5);
