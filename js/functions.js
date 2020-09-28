@@ -42,33 +42,13 @@ function interval() {}
 
 // 4--------------------------------------------------
 function didziausiasSkaiciusSarase(arr) {
-  if (!Array.isArray) {
-    return "Pateikta netinkamo tipo reikšmė.";
-  } else if (arr.length === 0) {
-    return "Pateiktas sąrašas negali būti tuščias.";
-  }
-  let didziausias;
-
-  for (let i = 0; i < arr.length; i++) {
-    if (i === 0) {
-      didziausias = arr[i];
-    } else if (didžiausias < arr[i]) {
-      didziausias = arr[i];
-    }
-  }
-  return didziausias;
-}
-
-console.log(didziausiasSkaiciusSarase([1]));
-console.log(didziausiasSkaiciusSarase([1, 2, 3]));
-
-function didziausiasSkaiciusSarase(arr) {
   if (!Array.isArray(arr)) {
     return "Pateikta netinkamo tipo reikšmė.";
-  } else if (arr.length === 0) {
+  } else if (arr.length === 0 || typeof arr !== "object") {
     return "Pateiktas sąrašas negali būti tuščias.";
   }
-
+  // let didziausias = - infinity; nes nepalyginami -infinity< "text"
+  // if didziausiasSkaiciusSarase === 'number'{}
   let didziausias;
 
   for (let i = 0; i < arr.length; i++) {
@@ -79,6 +59,7 @@ function didziausiasSkaiciusSarase(arr) {
     }
   }
   return didziausias;
+  // if (didziausiasSkaiciusSarase === -infinity) {retun sarase nera skaiciu}
 }
 
 console.log(didziausiasSkaiciusSarase([1]));
@@ -88,7 +69,9 @@ console.log(didziausiasSkaiciusSarase([69, 69, 69, 69, 66]));
 console.log(didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8]));
 console.log(didziausiasSkaiciusSarase("pomidoras"));
 console.log(didziausiasSkaiciusSarase([]));
+console.log(didziausiasSkaiciusSarase("pgtr", 67, 5));
 
+// pasipraktikavimui: [1, 2, 3 [4,7,[-5, 8]]] kad rastu 8
 // 5
 function isrinktiRaides(text, kelintinis) {
   if (typeof text !== "string") {
@@ -121,15 +104,18 @@ console.log(isrinktiRaides("abc", 0));
 console.log(isrinktiRaides("abc", 4));
 console.log(isrinktiRaides(1561, 2));
 
-// 6
-// 6
+// 6 PATAISYTI
 // turi buti tuscias kintamasis i kuri pliusuosime siu skaiciu dalybos reiksme (viskas tas pats, tik dabar bus numeriai)
 function dalyba(numeris, kelintinisSk) {
-  if (!Array.isArray(numeris) || numeris === "") {
+  if (
+    !Array.isArray(numeris) ||
+    typeof numeris !== "number" ||
+    numeris === ""
+  ) {
     return "Prašome įrašyti numerį";
-  } else if (numeris < 0 || numeris.length > 100) {
+  } else if (numeris < 0 && numeris.length > 100) {
     return "Prašome įrašyti numerį sudarantį nuo 0 iki 1000 simbolių";
-  } else if (kelintinisSk === "" || kelintinisSk > numeris.length) {
+  } else if (kelintinisSk !== "number" && kelintinisSk === "") {
     return "Prašome įrašyti kelintinį skaičių";
   }
   //   i +1 - interacija yra characters skaicius ir nurodo nuo kelinto character pradesime dalinti
@@ -145,6 +131,49 @@ function dalyba(numeris, kelintinisSk) {
 console.log(dalyba([8, 5, 6, 4, 7, 5], 2));
 console.log(dalyba([8, 8, 5, 2, 6, 7, 7, 5, 5, 5], 3));
 console.log(dalyba([7, 5, 8, 5, 9, 6, 2, 2, 1], 8));
-console.log(dalyba([8, 5, 5], 6));
+console.log(
+  dalyba(
+    [
+      8,
+      5,
+      5,
+      5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      8,
+      8,
+      8,
+      5,
+      2,
+      6,
+      3,
+      6,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      4,
+      5,
+      5,
+      5,
+    ],
+    6
+  )
+);
 console.log(dalyba("tekstas", 3));
 console.log(dalyba([6, 6, 5, 8, 8, 1], 0));
